@@ -1,23 +1,21 @@
 package com.rootslab.task_manager.view
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.ViewModelProvider
+import com.rootslab.task_manager.R
+import com.rootslab.task_manager.databinding.ActivityRegisterBinding
+import com.rootslab.task_manager.viewmodel.RegisterViewModel
 
 class RegisterActivity : AppCompatActivity(), View.OnClickListener {
 
     private val viewModel: RegisterViewModel by viewModels()
     private val binding: ActivityRegisterBinding by lazy {
-        ActivityRegisterBinding.inflate(
-            layoutInflater
-        )
+        ActivityRegisterBinding.inflate(layoutInflater)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +34,6 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
             insets
         }
 
-        // Eventos
         binding.buttonSave.setOnClickListener(this)
 
         observe()
@@ -49,7 +46,6 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun observe() {
-
     }
 
     private fun handleSave() {

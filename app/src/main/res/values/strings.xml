@@ -1,3 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">task-manager</string>
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="login">Login</string>
+    <string name="email">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="name">Nome</string>
+    <string name="create_account">Criar conta</string>
+    <string name="save">Salvar</string>
+    <string name="description">Descrição</string>
+    <string name="select_date">Selecionar data</string>
+    <string name="add_task">Adicionar tarefa</string>
+    <string name="all_tasks">Todas as tarefas</string>
+    <string name="next_tasks">Próximos 7 dias</string>
+    <string name="expired_tasks">Expiradas</string>
+    <string name="logout">Sair</string>
+    <string name="task_status">Status da tarefa</string>
+    <string name="title_task_removal">Remover tarefa</string>
+    <string name="label_remove_task">Deseja remover esta tarefa?</string>
+    <string name="button_yes">Sim</string>
+    <string name="button_cancel">Cancelar</string>
 </resources>

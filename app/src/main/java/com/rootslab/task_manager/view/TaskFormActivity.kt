@@ -1,16 +1,22 @@
 package com.rootslab.task_manager.view
 
-import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import android.app.DatePickerDialog
+import android.os.Bundle
 import android.view.View
 import android.widget.DatePicker
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.rootslab.task_manager.R
+import com.rootslab.task_manager.databinding.ActivityTaskFormBinding
+import com.rootslab.task_manager.service.model.PriorityModel
+import com.rootslab.task_manager.service.model.TaskModel
+import com.rootslab.task_manager.viewmodel.TaskFormViewModel
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Locale
 
 class TaskFormActivity : AppCompatActivity(), View.OnClickListener,
@@ -18,9 +24,7 @@ class TaskFormActivity : AppCompatActivity(), View.OnClickListener,
 
     private val viewModel: TaskFormViewModel by viewModels()
     private val binding: ActivityTaskFormBinding by lazy {
-        ActivityTaskFormBinding.inflate(
-            layoutInflater
-        )
+        ActivityTaskFormBinding.inflate(layoutInflater)
     }
     private val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
     private var listPriority: List<PriorityModel> = mutableListOf()
@@ -42,7 +46,6 @@ class TaskFormActivity : AppCompatActivity(), View.OnClickListener,
             insets
         }
 
-        // Eventos
         binding.buttonSave.setOnClickListener(this)
         binding.buttonDate.setOnClickListener(this)
 
