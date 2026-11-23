@@ -3,6 +3,7 @@ package com.rootslab.task_manager.view.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.rootslab.task_manager.databinding.RowTaskListBinding
 import com.rootslab.task_manager.service.listener.TaskListener
 import com.rootslab.task_manager.service.model.TaskModel
 import com.rootslab.task_manager.view.viewholder.TaskViewHolder
@@ -34,5 +35,4 @@ class TaskAdapter : RecyclerView.Adapter<TaskViewHolder>() {
     fun attachListener(taskListener: TaskListener) {
         listener = taskListener
     }
-
 }

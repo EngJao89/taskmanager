@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.rootslab.task_manager.databinding.FragmentAllTasksBinding
+import com.rootslab.task_manager.service.constants.TaskConstants
 import com.rootslab.task_manager.view.adapter.TaskAdapter
+import com.rootslab.task_manager.viewmodel.TaskListViewModel
 
 class AllTasksFragment : Fragment() {
 
@@ -26,7 +29,6 @@ class AllTasksFragment : Fragment() {
 
         taskFilter = requireArguments().getInt(TaskConstants.BUNDLE.TASKFILTER, 0)
 
-        // Cria os observadores
         observe()
 
         return binding.root
@@ -44,5 +46,3 @@ class AllTasksFragment : Fragment() {
     private fun observe() {
     }
 }
-
-annotation class TaskListViewModel

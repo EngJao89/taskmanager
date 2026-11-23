@@ -2,6 +2,8 @@ package com.rootslab.task_manager.view.viewholder
 
 import android.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
+import com.rootslab.task_manager.R
+import com.rootslab.task_manager.databinding.RowTaskListBinding
 import com.rootslab.task_manager.service.listener.TaskListener
 import com.rootslab.task_manager.service.model.TaskModel
 import java.text.SimpleDateFormat
@@ -12,11 +14,7 @@ class TaskViewHolder(private val itemBinding: RowTaskListBinding, val listener: 
 
     private val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
 
-    /**
-     * Atribui valores aos elementos de interface e também eventos
-     */
     fun bindData(task: TaskModel) {
-
         itemBinding.textDescription.text = task.description
         itemBinding.textPriority.text = task.priorityDescription
 
@@ -25,14 +23,12 @@ class TaskViewHolder(private val itemBinding: RowTaskListBinding, val listener: 
             itemBinding.textDueDate.text = simpleDateFormat.format(date)
         }
 
-        // Faz o tratamento para tarefas já completas
         if (task.complete) {
             itemBinding.imageTask.setImageResource(R.drawable.ic_done)
         } else {
             itemBinding.imageTask.setImageResource(R.drawable.ic_todo)
         }
 
-        // Eventos
         itemBinding.textDescription.setOnClickListener { listener.onListClick(task.id) }
         itemBinding.imageTask.setOnClickListener {
             if (task.complete) {
@@ -46,13 +42,12 @@ class TaskViewHolder(private val itemBinding: RowTaskListBinding, val listener: 
             AlertDialog.Builder(itemView.context)
                 .setTitle(R.string.title_task_removal)
                 .setMessage(R.string.label_remove_task)
-                .setPositiveButton(R.string.button_yes) { dialog, which ->
+                .setPositiveButton(R.string.button_yes) { _, _ ->
                     listener.onDeleteClick(task.id)
                 }
                 .setNeutralButton(R.string.button_cancel, null)
                 .show()
             true
         }
-
     }
 }

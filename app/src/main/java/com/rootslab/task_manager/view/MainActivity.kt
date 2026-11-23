@@ -3,12 +3,19 @@ package com.rootslab.task_manager.view
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.google.android.material.navigation.NavigationView
-import androidx..findNavController
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
-import androidx.navigation.ui.*
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.navigation.NavigationView
+import com.rootslab.task_manager.R
+import com.rootslab.task_manager.databinding.ActivityMainBinding
+import com.rootslab.task_manager.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,10 +33,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(applicationContext, TaskFormActivity::class.java))
         }
 
-        // Navegação
         setupNavigation()
-
-        // Observadores
         observe()
     }
 
@@ -58,9 +62,8 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
     }
 
     private fun observe() {
     }
-}navigation
+}

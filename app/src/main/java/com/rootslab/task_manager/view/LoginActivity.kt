@@ -1,13 +1,16 @@
 package com.rootslab.task_manager.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.WindowInsetsCompat
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.rootslab.task_manager.R
+import com.rootslab.task_manager.databinding.ActivityLoginBinding
+import com.rootslab.task_manager.viewmodel.LoginViewModel
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -30,11 +33,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             insets
         }
 
-        // Eventos
         binding.buttonLogin.setOnClickListener(this)
         binding.textRegister.setOnClickListener(this)
 
-        // Observadores
         observe()
     }
 
