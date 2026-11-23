@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.rootslab.task_manager.service.listener.TaskListener
 import com.rootslab.task_manager.service.model.TaskModel
+import com.rootslab.task_manager.view.viewholder.TaskViewHolder
 
 class TaskAdapter : RecyclerView.Adapter<TaskViewHolder>() {
 
@@ -13,7 +14,7 @@ class TaskAdapter : RecyclerView.Adapter<TaskViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val itemBinding = ItemTaskListBinding.inflate(inflater, parent, false)
+        val itemBinding = RowTaskListBinding.inflate(inflater, parent, false)
         return TaskViewHolder(itemBinding, listener)
     }
 
