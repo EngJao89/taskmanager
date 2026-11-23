@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.rootslab.task_manager.view.adapter.TaskAdapter
 
 class AllTasksFragment : Fragment() {
 
@@ -43,3 +44,5 @@ class AllTasksFragment : Fragment() {
     private fun observe() {
     }
 }
+
+annotation class TaskListViewModel
