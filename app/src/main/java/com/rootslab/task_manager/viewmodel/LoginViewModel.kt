@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.rootslab.task_manager.service.constants.TaskConstants
 import com.rootslab.task_manager.service.repository.PersonRepository
+import com.rootslab.task_manager.service.repository.PriorityRepository
 import com.rootslab.task_manager.service.repository.remote.RetrofitClient
 
 class LoginViewModel(application: Application) : BaseAndroidViewModel(application) {
