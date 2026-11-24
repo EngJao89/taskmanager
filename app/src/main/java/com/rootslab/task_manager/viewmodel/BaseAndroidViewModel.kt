@@ -2,6 +2,8 @@ package com.rootslab.task_manager.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import com.google.gson.Gson
+import com.rootslab.task_manager.service.model.ValidationModel
 import retrofit2.Response
 
 open class BaseAndroidViewModel(private val app: Application) : AndroidViewModel(app) {

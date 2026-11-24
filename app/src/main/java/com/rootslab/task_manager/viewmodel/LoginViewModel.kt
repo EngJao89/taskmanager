@@ -3,11 +3,13 @@ package com.rootslab.task_manager.viewmodel
 import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.rootslab.task_manager.service.constants.TaskConstants
+import com.rootslab.task_manager.service.model.ValidationModel
 import com.rootslab.task_manager.service.repository.PersonRepository
 import com.rootslab.task_manager.service.repository.PriorityRepository
 import com.rootslab.task_manager.service.repository.remote.RetrofitClient
+import kotlinx.coroutines.launch
 
 class LoginViewModel(application: Application) : BaseAndroidViewModel(application) {
 
