@@ -6,6 +6,7 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import com.rootslab.task_manager.service.exception.NoInternetException
 import com.google.gson.Gson
+import com.rootslab.task_manager.R
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
