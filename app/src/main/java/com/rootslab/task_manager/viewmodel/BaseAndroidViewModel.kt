@@ -3,6 +3,8 @@ package com.rootslab.task_manager.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import com.google.gson.Gson
+import com.rootslab.task_manager.R
+import com.rootslab.task_manager.service.exception.NoInternetException
 import com.rootslab.task_manager.service.model.ValidationModel
 import retrofit2.Response
 
