@@ -9,11 +9,13 @@ import com.rootslab.task_manager.service.model.PriorityModel
 @Database(entities = [PriorityModel::class], version = 1)
 abstract class TaskDatabase : RoomDatabase() {
 
+    abstract fun priorityDAO(): PriorityDAO
+
     companion object {
         private lateinit var INSTANCE: TaskDatabase
 
         fun getDatabase(context: Context): TaskDatabase {
-            if (!::INSTANCE.isInitialized) {
+            if (!Companion::INSTANCE.isInitialized) {
                 synchronized(TaskDatabase::class) {
                     INSTANCE = Room.databaseBuilder(context, TaskDatabase::class.java, "tasksDB")
                         .allowMainThreadQueries()
@@ -23,4 +25,6 @@ abstract class TaskDatabase : RoomDatabase() {
             return INSTANCE
         }
     }
+
 }
+
