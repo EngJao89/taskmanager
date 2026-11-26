@@ -20,4 +20,5 @@
     <string name="label_remove_task">Deseja remover esta tarefa?</string>
     <string name="button_yes">Sim</string>
     <string name="button_cancel">Cancelar</string>
+    <string name="error_internet_connection" />
 </resources>
