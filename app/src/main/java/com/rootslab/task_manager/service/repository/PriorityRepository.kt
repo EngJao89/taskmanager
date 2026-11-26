@@ -3,6 +3,7 @@ package com.rootslab.task_manager.service.repository
 import android.content.Context
 import com.rootslab.task_manager.service.model.PriorityModel
 import com.rootslab.task_manager.service.repository.local.TaskDatabase
+import com.rootslab.task_manager.service.repository.remote.PriorityService
 import com.rootslab.task_manager.service.repository.remote.RetrofitClient
 import kotlinx.coroutines.flow.Flow
 import retrofit2.Response
