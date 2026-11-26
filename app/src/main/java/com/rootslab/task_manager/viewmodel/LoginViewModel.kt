@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.rootslab.task_manager.service.constants.TaskConstants
+import com.rootslab.task_manager.service.exception.NoInternetException
 import com.rootslab.task_manager.service.model.ValidationModel
 import com.rootslab.task_manager.service.repository.PersonRepository
 import com.rootslab.task_manager.service.repository.PriorityRepository
