@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.first
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
-class PreferencesManager(private val context: Context) {
+class PreferencesManager (private val context: Context) {
 
     /**
      * Recebe uma chave e armazena o valor no DataStore

@@ -8,6 +8,7 @@ import com.rootslab.task_manager.service.constants.TaskConstants
 import com.rootslab.task_manager.service.model.ValidationModel
 import com.rootslab.task_manager.service.repository.PersonRepository
 import com.rootslab.task_manager.service.repository.PriorityRepository
+import com.rootslab.task_manager.service.repository.local.PreferencesManager
 import com.rootslab.task_manager.service.repository.remote.RetrofitClient
 import kotlinx.coroutines.launch
 
