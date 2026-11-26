@@ -21,4 +21,5 @@
     <string name="button_yes">Sim</string>
     <string name="button_cancel">Cancelar</string>
     <string name="error_internet_connection" />
+    <string name="error_unexpected" />
 </resources>
