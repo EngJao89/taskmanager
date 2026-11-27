@@ -2,6 +2,8 @@ package com.rootslab.task_manager.service.repository
 
 import android.content.Context
 import com.rootslab.task_manager.service.model.TaskModel
+import com.rootslab.task_manager.service.repository.remote.RetrofitClient
+import com.rootslab.task_manager.service.repository.remote.TaskService
 import retrofit2.Response
 
 class TaskRepository(context: Context) : BaseRepository(context) {
